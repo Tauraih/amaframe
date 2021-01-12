@@ -1,0 +1,3 @@
+DB_DSN = mysql:host=localhost;port3306;dbname=amaframework
+DB_USER = root
+DB_PASSWORD = password

@@ -1,0 +1,17 @@
+{
+    "name": "taurai/amaframe",
+    "authors": [
+        {
+            "name": "Tauraih Valentine Maputsa",
+            "email": "amaputsa@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "app\\": "./"
+        }
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.2"
+    }
+}
