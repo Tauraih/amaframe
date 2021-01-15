@@ -7,7 +7,7 @@ class m001_initial
     public function up()
     {
         $db = Application::$app->db;
-        $SQL = "CREATE TABLE users (
+        $SQL = "CREATE TABLE IF NOT EXISTS users (
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 email VARCHAR(255) NOT NULL,
                 firstname VARCHAR(255) NOT NULL,
@@ -20,6 +20,8 @@ class m001_initial
 
     public function down()
     {
-        echo "Down migration".PHP_EOL;
+        $db = Application::$app->db;
+        $SQL = "DROP TABLE users;";
+        $db->pdo->exec($SQL);
     }
 }
